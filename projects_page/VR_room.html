@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Space in VR - Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-details {
+            max-width: var(--width-medium);
+            margin: 8rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .preview-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--text-color-two);
+            border-radius: 5px;
+            font-weight: var(--weight-semibold);
+            transition: 0.3s ease;
+        }
+
+        .preview-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            font-weight: var(--weight-semibold);
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .section-content ul {
+            list-style: disc;
+            padding-left: 2rem;
+        }
+
+        .section-content ul ul {
+            list-style: circle;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <h1 id="logo">
+            <a href="https://aswin-avj.github.io/portfolio/"
+              ><img src="../assets/logo.png" alt="Your Logo"
+            /></a>
+          </h1>
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <!-- <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link" href="#footer">CONTACT</a></li> -->
+            <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
+            <!-- <li> list items -->
+              <a
+                class="nav-link btn btn-primary"
+                href="../assets/CV_Aswin_projupd.pdf"
+                target="_blank"
+                >RESUME <i class="fas fa-arrow-right"></i
+              ></a>
+            </li>
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="../assets/moon.svg" />
+                <img class="sun" src="../assets/sun.svg" />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    <main class="project-details">
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i
+              > Back to Projects</a>
+        
+
+        <h1>VR-ready Cornell Box simulation</h1>
+         <a href="roomVR/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://github.com/Aswin-avj/VR-ready-Cornell-Box-simulation" target="_blank" class="btn btn-secondary">View Code</a>
+
+        
+        <section class="section" id="what">
+  <h2 class="section-title">What</h2>
+  <div class="section-content">
+    <p>
+      I developed an interactive <strong>VR-ready Cornell Box simulation</strong> inspired by physically-based rendering principles. The 3D environment includes realistic lighting, material response, and user interface control. The project was built using <strong>Three.js</strong> and <strong>shader programming</strong>, and features a full VR interface with controller support.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <h2 class="section-title">How</h2>
+  <div class="section-content">
+    <strong>Modeling</strong>
+    <ul>
+      <li>Constructed a Cornell Box-style room with walls, ceiling, and floor using <code>PlaneGeometry</code>, with accurate positioning and rotation.</li>
+    </ul>
+    <strong>Materials</strong>
+    <ul>
+      <li>Applied different materials on key objects:
+        <ul>
+          <li><code>MeshLambertMaterial</code> on a <strong>cone</strong></li>
+          <li><code>MeshPhongMaterial</code> on a <strong>cylinder</strong></li>
+          <li><code>MeshPhysicalMaterial</code> on a <strong>sphere</strong></li>
+        </ul>
+      </li>
+      <li>All parameters were adjustable via <strong>lil-gui</strong>.</li>
+    </ul>
+    <strong>Lighting</strong>
+    <ul>
+      <li>Integrated multiple types of lights:
+        <ul>
+          <li>Ambient</li>
+          <li>Point</li>
+          <li>Directional</li>
+          <li>Hemisphere</li>
+          <li>Spot</li>
+        </ul>
+      </li>
+      <li>Added <code>RectAreaLight</code> for each wall to simulate light bouncing and improve realism.</li>
+    </ul>
+    <mark><i>(Note: Turn off the Ambient light to see the effects clearly)</i></mark> </br>
+    <strong>GUI Integration</strong>
+    <ul>
+      <li>Created a GUI panel to control lighting types, colors, intensity, and material properties (transparency, metalness, textures).</li>
+      <li>Embedded the GUI in VR using <code>HTMLMesh</code> and <code>InteractiveGroup</code>.</li>
+    </ul>
+    <strong>VR Integration</strong>
+    <ul>
+      <li>Enabled WebXR using <code>VRButton</code> and <code>XRControllerModelFactory</code>.</li>
+      <li>Supported VR controller interaction and GUI manipulation within the 3D space.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <h2 class="section-title">Results</h2>
+  <div class="section-content">
+    <ul>
+      <li>Created an immersive <strong>WebXR environment</strong> simulating realistic materials and lighting.</li>
+      <li>Achieved <strong>real-time interactivity</strong> in both desktop and VR modes.</li>
+      <li>Developed an <strong>extendable platform</strong> for testing PBR and UI experimentation in VR.</li>
+      <li>Gained proficiency in integrating <strong>shader-based materials</strong>, VR interfaces, and dynamic lighting using Three.js.</li>
+    </ul>
+  </div>
+</section>
+
+        <!-- <a href="color_space\index.html" target="_blank" class="preview-btn">Preview Project</a> -->
+         <a href="color_space/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://github.com/Aswin-avj/color_cloud_visualization" target="_blank" class="btn btn-secondary">View Code</a>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
