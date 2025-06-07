@@ -85,15 +85,19 @@ body {
 .navbar .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;  /* Changed from flex-start to flex-end */
   z-index: 20;
   height: 80px;
   width: 100%;
+  /* padding-right: 20px; Changed from padding-left */
 }
 
 .navbar .nav-menu {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;  /* Changed from flex-start to flex-end */
+  margin-left: auto;  /* Changed from margin-right to margin-left */
+  margin-right: 0;
+  align-items: center; 
   background: var(--bg-primary);
 }
 
