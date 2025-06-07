@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Space in VR - Project Details</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <style>
+        .project-details {
+            max-width: var(--width-medium);
+            margin: 8rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .preview-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--text-color-two);
+            border-radius: 5px;
+            font-weight: var(--weight-semibold);
+            transition: 0.3s ease;
+        }
+
+        .preview-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            font-weight: var(--weight-semibold);
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .section-content ul {
+            list-style: disc;
+            padding-left: 2rem;
+        }
+
+        .section-content ul ul {
+            list-style: circle;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="project-details">
+        <a href="../index.html" class="back-link">← Back to Projects</a>
+        
+
+        <h1>Color Cloud Visualization in VR</h1>
+
+        <section class="section" id="what">
+            <h2 class="section-title">What</h2>
+            <div class="section-content">
+                <p>An immersive web-based 3D visualization tool that transforms real-time color data from a video into dynamic point clouds in multiple color spaces: RGB, CIEXYZ, CIExyY, and CIELAB. The application allows users to:</p>
+                <ul>
+                    <li>Switch between color spaces interactively</li>
+                    <li>View the original video alongside the corresponding 3D color cloud</li>
+                    <li>Interact with the scene in VR/MR using Meta Quest controllers, including grabbing and moving the video plane</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="how">
+            <h2 class="section-title">How</h2>
+            <div class="section-content">
+                <p>Built using:</p>
+                <ul>
+                    <li>Three.js to render 3D scenes and integrate WebXR for VR/MR support</li>
+                    <li>Custom GLSL shaders to:
+                        <ul>
+                            <li> Sample color data from a video texture</li>
+                            <li> Convert RGB to XYZ, xyY, and LAB color spaces</li>
+                            <li> Render color points as particles with realistic depth and point sizing</li>
+                        </ul>
+                    </li>
+                    <li>Different shaders for both main color cloud and its corresponding "shadow" projection</li>
+                    <li>Real-time interaction using GUI (via lil-gui) and Meta Quest controller events</li>
+                    <li>HTMLMesh GUI panel that is interactable inside VR</li>
+                    <li>Live video texture as input, sampled at regular intervals to create a 3D point cloud</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="results">
+            <h2 class="section-title">Results</h2>
+            <div class="section-content">
+                <p>The project successfully demonstrates:</p>
+                <ul>
+                    <li>Real-time, immersive visualization of color data from a video across four color models</li>
+                    <li>Both direct and density-based visual modes</li>
+                    <li>VR interaction for exploring color space representations spatially</li>
+                    <li>Hands-on experience in shader programming, 3D color theory, and XR interaction systems</li>
+                    <li>Final outcome: an educational and exploratory tool that bridges computer graphics, color science, and XR interaction design</li>
+                </ul>
+            </div>
+        </section>
+
+        <a href="projects_page\color_space\index.html" class="preview-btn">Preview Project</a>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

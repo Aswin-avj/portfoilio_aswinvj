@@ -19,6 +19,8 @@
   --bg-secondary-two: #111111;
 
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
 
   /* Font Weight */
   --weight-small: 400;
@@ -196,9 +198,10 @@ body {
 .project-info {
   display: flex;
   justify-content: space-between;
-  opacity: 0;
+  opacity: 1;
   position: relative;
   transition: 0.5s ease-in-out;
+  text-shadow: var(--text-shadow);
 }
 
 .project-bio {
