@@ -114,61 +114,80 @@
               > Back to Projects</a>
         
 
-        <h1>Color Cloud Visualization in VR</h1>
-         <a href="color_space/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://github.com/Aswin-avj/color_cloud_visualization" target="_blank" class="btn btn-secondary">View Code</a>
+        <section class="section" id="project-title">
+  <h1 class="section-title">
+    Performance and Stress Detection While Being Constantly Aware of Time Using Eye-Tracking Data
+  </h1>
+</section>
 
-        
-        <section class="section" id="what">
-            <h2 class="section-title">What</h2>
-            <div class="section-content">
-                <p>An immersive web-based 3D visualization tool that transforms real-time color data from a video into dynamic point clouds in multiple color spaces: RGB, CIEXYZ, CIExyY, and CIELAB. The application allows users to:</p>
-                <ul>
-                    <li>Switch between color spaces interactively</li>
-                    <li>View the original video alongside the corresponding 3D color cloud</li>
-                    <li>Interact with the scene in VR/MR using Meta Quest controllers, including grabbing and moving the video plane</li>
-                </ul>
-            </div>
-        </section>
+
+<section class="section" id="what-we-did">
+  <h2 class="section-title">What We Did</h2>
+  <div class="section-content">
+    <p>
+      We explored how constant awareness of time (via an on-screen timer) affects performance and stress levels during a time-bound visual task. The task was a “spot-the-difference” game, which relies on eye movements and visual attention, simulating real-world cognitive load under time pressure.
+    </p>
+  </div>
+</section>
+
 <hr />
 
-        <section class="section" id="how">
-            <h2 class="section-title">How</h2>
-            <div class="section-content">
-                <p>Built using:</p>
-                <ul>
-                    <li>Three.js to render 3D scenes and integrate WebXR for VR/MR support</li>
-                    <li>Custom GLSL shaders to:
-                        <ul>
-                            <li> Sample color data from a video texture</li>
-                            <li> Convert RGB to XYZ, xyY, and LAB color spaces</li>
-                            <li> Render color points as particles with realistic depth and point sizing</li>
-                        </ul>
-                    </li>
-                    <li>Different shaders for both main color cloud and its corresponding "shadow" projection</li>
-                    <li>Real-time interaction using GUI (via lil-gui) and Meta Quest controller events</li>
-                    <li>HTMLMesh GUI panel that is interactable inside VR</li>
-                    <li>Live video texture as input, sampled at regular intervals to create a 3D point cloud</li>
-                </ul>
-            </div>
-        </section>
+<section class="section" id="how-we-did-it">
+  <h2 class="section-title">How We Did It</h2>
+  <div class="section-content">
+    <ul>
+      <li>
+        <strong>Participants</strong>:<br>
+        10 students were divided into two groups – one exposed to a visible timer and the other not.
+      </li>
+      <li>
+        <strong>Task</strong>:<br>
+        Spot-the-difference game using pairs of images displayed for 20 seconds.
+      </li>
+      <li>
+        <strong>Eye Tracking</strong>:<br>
+        Used the <strong>Tobii Eye Tracker 4C</strong> to collect gaze data, analyzed via the <strong>I-DT algorithm</strong> to extract fixations and saccades.
+      </li>
+      <li>
+        <strong>Stress &amp; Performance Measurement</strong>:<br>
+        Post-task questionnaires and analysis of eye-tracking data (fixation counts, transitions, and scanpaths).
+      </li>
+      <li>
+        <strong>Analysis Tools</strong>:<br>
+        Data cleaning, algorithm tuning, and visualizations to interpret behavioral responses and stress levels.
+      </li>
+    </ul>
+  </div>
+</section>
+
 <hr />
 
-        <section class="section" id="results">
-            <h2 class="section-title">Results</h2>
-            <div class="section-content">
-                <p>The project successfully demonstrates:</p>
-                <ul>
-                    <li>Real-time, immersive visualization of color data from a video across four color models</li>
-                    <li>Both direct and density-based visual modes</li>
-                    <li>VR interaction for exploring color space representations spatially</li>
-                    <li>Hands-on experience in shader programming, 3D color theory, and XR interaction systems</li>
-                    <li>Final outcome: an educational and exploratory tool that bridges computer graphics, color science, and XR interaction design</li>
-                </ul>
-            </div>
-        </section>
+<section class="section" id="results">
+  <h2 class="section-title">Results</h2>
+  <div class="section-content">
+    <ul>
+      <li>
+        <strong>Stress</strong>:<br>
+        Participants with a visible timer reported higher stress levels for most images.
+      </li>
+      <li>
+        <strong>Performance</strong>:<br>
+        No statistically significant difference in the number of differences found; however, participants with the timer tended to perform slightly worse on some images.
+      </li>
+      <li>
+        <strong>Gaze Behavior</strong>:<br>
+        The timer group showed quicker, more erratic fixations early on—indicating rushed scanning—while the no-timer group showed more stable and exploratory gaze behavior.
+      </li>
+      <li>
+        <strong>Fixation Transitions</strong>:<br>
+        More transitions were observed in the no-timer group, implying more relaxed and thorough exploration.
+      </li>
+    </ul>
+  </div>
+</section>
 
         <!-- <a href="color_space\index.html" target="_blank" class="preview-btn">Preview Project</a> -->
-         <a href="color_space/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://github.com/Aswin-avj/color_cloud_visualization" target="_blank" class="btn btn-secondary">View Code</a>
+         <!-- <a href="color_space/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://github.com/Aswin-avj/color_cloud_visualization" target="_blank" class="btn btn-secondary">View Code</a> -->
     </main>
 
     <script src="../js/script.js"></script>
