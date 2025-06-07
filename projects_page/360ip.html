@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stereo 360° Image Processing - Project Details</title>
+
+    <!-- Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/favicon/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-details {
+            max-width: var(--width-medium);
+            margin: 8rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .preview-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--text-color-two);
+            border-radius: 5px;
+            font-weight: var(--weight-semibold);
+            transition: 0.3s ease;
+        }
+
+        .preview-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            font-weight: var(--weight-semibold);
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .section-content ul {
+            list-style: disc;
+            padding-left: 2rem;
+        }
+
+        .section-content ul ul {
+            list-style: circle;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <h1 id="logo">
+            <a href="https://aswin-avj.github.io/portfolio/"
+              ><img src="../assets/logo.png" alt="Your Logo"
+            /></a>
+          </h1>
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <!-- <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link" href="#footer">CONTACT</a></li> -->
+            <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
+            <!-- <li> list items -->
+              <a
+                class="nav-link btn btn-primary"
+                href="../assets/CV_Aswin_projupd.pdf"
+                target="_blank"
+                >RESUME <i class="fas fa-arrow-right"></i
+              ></a>
+            </li>
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="../assets/moon.svg" />
+                <img class="sun" src="../assets/sun.svg" />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    <main class="project-details">
+       <section class="project-details">
+  <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+  <h1>Stereo 360° Image Processing</h1>
+         <a href="360ip-vs/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://drive.google.com/drive/folders/1w6YpFQCb_VjTn3Xw-N70cpml4tO9dgx1?usp=sharing" target="_blank" class="btn btn-secondary">View Code</a>
+
+  <section class="section" id="what">
+    <h2 class="section-title">What</h2>
+    <div class="section-content">
+      <ul>
+        <li><strong>Format Conversions:</strong>
+          <ul>
+            <li>Equirectangular &harr; Cube map transformations (CPU/GPU)</li>
+            <li>Denoising for both formats</li>
+          </ul>
+        </li>
+        <li><strong>Visualization:</strong>
+          <ul>
+            <li>Web-based 360° viewer with depth perception using Three.js</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <hr />
+
+  <section class="section" id="how">
+    <h2 class="section-title">How</h2>
+    <div class="section-content">
+      <strong>Core Transformations</strong>
+      <ul>
+        <li><strong>Equirectangular → Cube Map</strong>
+          <ul>
+            <li>Spherical coordinate mapping with OpenCV</li>
+            <li>Parallelized CPU (OpenMP) and GPU (CUDA) implementations</li>
+          </ul>
+        </li>
+        <li><strong>Cube Map → Equirectangular</strong>
+          <ul>
+            <li>Ray projection onto cube faces</li>
+            <li>Face-aware coordinate mapping</li>
+          </ul>
+        </li>
+      </ul>
+      <pre><code class="language-cpp">// CUDA Kernel (equi-cube.cu)
+__global__ void equiCubeKernel(/*...*/) {
+  // Calculate 3D cube coordinates
+  // Convert to spherical → equirectangular
+}
+</code></pre>
+      <strong>Adaptive Denoising</strong>
+      <ul>
+        <li><strong>Covariance-Driven Filtering:</strong>
+          <ul>
+            <li>Analyze local texture via covariance matrices</li>
+            <li>Dynamically adjust Gaussian kernel size:<br>
+              <code>kernelSize = factor_ratio / (det(covariance) + ε)</code>
+            </li>
+          </ul>
+        </li>
+        <li><strong>Cube Map Optimization:</strong>
+          <ul>
+            <li>Denoise individual faces → Convert to equirectangular</li>
+            <li>Avoids polar distortions in equirectangular denoising</li>
+          </ul>
+        </li>
+      </ul>
+      <strong>Web Visualization</strong>
+      <ul>
+        <li><strong>Three.js VR Scene:</strong>
+          <ul>
+            <li>Panoramic sphere with depth displacement:</li>
+          </ul>
+          <pre><code class="language-javascript">sphere.material.displacementMap = depthTexture; // Depth-based 3D effect
+</code></pre>
+          <ul>
+            <li>WebXR integration for VR headsets</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <hr />
+
+  <section class="section" id="results">
+    <h2 class="section-title">Results</h2>
+    <div class="section-content">
+      <ul>
+        <li>Speedup with CUDA</li>
+        <li>Real-time cube map generation</li>
+        <!-- <li><strong>Quality Improvements:</strong> -->
+          <!-- <ul> -->
+            <!-- <li>Denoising preserved details at equirectangular poles</li> -->
+            <li>Depth-enhanced 360° scenes improved VR immersion</li>
+          <!-- </ul> -->
+        </li>
+      </ul>
+      <!-- <strong>Output Samples:</strong>
+      <table>
+        <thead>
+          <tr>
+            <th>Input</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Equirectangular</td>
+            <td><img src="image_CUBE_cuda.png" alt="Cube Map" style="max-width:120px;"></td>
+          </tr>
+          <tr>
+            <td>Cube Map</td>
+            <td><img src="image_EQUI.png" alt="Equirectangular" style="max-width:120px;"></td>
+          </tr>
+          <tr>
+            <td>Denoised</td>
+            <td><img src="equi_denoised.png" alt="Anaglyph" style="max-width:120px;"></td>
+          </tr>
+        </tbody>
+      </table> -->
+    </div>
+  </section>
+
+
+        <!-- <a href="color_space\index.html" target="_blank" class="preview-btn">Preview Project</a> -->
+         <a href="360ip-vs/index.html" target="_blank" class="btn btn-primary">Preview Project</a> <a href="https://drive.google.com/drive/folders/1w6YpFQCb_VjTn3Xw-N70cpml4tO9dgx1?usp=sharing" target="_blank" class="btn btn-secondary">View Code</a>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
