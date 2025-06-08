@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics: Autonomous Navigation and Odometry - Project Details</title>
+
+    <!-- Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="../assets/favicon/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico" />
+    <link rel="manifest" href="../assets/favicon/site.webmanifest" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-details {
+            max-width: var(--width-medium);
+            margin: 8rem auto 2rem;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .section-content {
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        .preview-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--text-color-two);
+            border-radius: 5px;
+            font-weight: var(--weight-semibold);
+            transition: 0.3s ease;
+        }
+
+        .preview-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+            font-weight: var(--weight-semibold);
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .section-content ul {
+            list-style: disc;
+            padding-left: 2rem;
+        }
+
+        .section-content ul ul {
+            list-style: circle;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <h1 id="logo">
+            <a href="https://aswin-avj.github.io/portfolio/"
+              ><img src="../assets/logo.png" alt="Your Logo"
+            /></a>
+          </h1>
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <!-- <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link" href="#footer">CONTACT</a></li> -->
+            <!-- <li><a class="nav-link" href="#">BlOG</a></li> -->
+            <!-- <li> list items -->
+              <a
+                class="nav-link btn btn-primary"
+                href="../assets/resume.pdf"
+                target="_blank"
+                >RESUME <i class="fas fa-arrow-right"></i
+              ></a>
+            </li>
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="../assets/moon.svg" />
+                <img class="sun" src="../assets/sun.svg" />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    <main class="project-details">
+        <a href="../index.html" class="back-link"><i class="fas fa-arrow-left"></i
+              > Back to Projects</a>
+        
+
+ <h1>Robotics: Autonomous Navigation and Odometry</h1>
+ <a href="RXR_LA5.pdf" target="_blank" class="btn btn-secondary">View Report</a>
+
+
+<section class="section" id="what">
+  <h2 class="section-title">What</h2>
+  <div class="section-content">
+    <p>
+      This project focuses on exploring key concepts in robotics, specifically within the <strong>ROS 2</strong> (Robot Operating System 2) framework. The core objective was to implement and demonstrate fundamental robotic functionalities: <strong>Simultaneous Localization and Mapping (SLAM)</strong>, autonomous navigation using <strong>Nav2</strong>, calculating and publishing robot odometry, and custom path planning.
+    </p>
+    <p>
+      The project involved setting up a simulation environment using <strong>Gazebo</strong> and <strong>Rviz</strong>, creating custom ROS 2 packages, and developing Python nodes to interact with the simulated robot. A significant aspect was addressing environmental limitations by utilizing a UEF server for smooth operation of the simulation tools.
+    </p>
+  </div>
+</section>
+
+<hr />
+
+<section class="section" id="how">
+  <h2 class="section-title">How</h2>
+  <div class="section-content">
+    <strong>Environment Setup</strong>
+    <ul>
+      <li>Initial attempts with WSL/Docker and virtual machines faced performance issues</li>
+      <li>Resolved by transitioning to a UEF server for fluid simulation experience</li>
+    </ul>
+
+    <strong>ROS 2 Fundamentals</strong>
+    <ul>
+      <li>Demonstrated understanding of the ROS 2 publisher-subscriber model</li>
+      <li>Listed available topics and echoed data from the Lidar scanner (<code>/scan</code>)</li>
+      <li>Confirmed obstacle detection capabilities</li>
+    </ul>
+
+    <strong>SLAM and Navigation Demo</strong>
+    <ul>
+      <li>Subscribed to the <code>/map</code> topic in Rviz for real-time map visualization</li>
+      <li>Utilized Nav2 stack for autonomous navigation</li>
+      <li>Implemented "Nav2 Goals" for guided robot navigation</li>
+    </ul>
+
+    <strong>Custom ROS 2 Package and Odometry</strong>
+    <ul>
+      <li>Created new ROS 2 package using Turtle Nest tool</li>
+      <li>Developed OdometryPublisher node for wheel velocity-based calculations</li>
+      <li>Visualized robot's traversed path and position in Rviz</li>
+    </ul>
+
+    <strong>Custom Path Planning</strong>
+    <ul>
+      <li>Modified nav2_params.yaml for custom path planning integration</li>
+      <li>Implemented straight-line path planning in dedicated Python node</li>
+    </ul>
+  </div>
+</section>
+
+<hr />
+
+<section class="section" id="results">
+  <h2 class="section-title">Results</h2>
+  <div class="section-content">
+    <ul>
+      <li>Achieved stable, high-performance simulation environment on UEF server</li>
+      <li>Demonstrated proficiency in <strong>ROS 2</strong> concepts and implementation</li>
+      <li>Successfully implemented <strong>SLAM</strong> and autonomous navigation</li>
+      <li>Developed and analyzed wheel odometry calculations</li>
+      <li>Identified limitations and proposed solutions for real-world scenarios</li>
+      <li>Integrated custom path planning algorithm with <strong>Nav2</strong> framework</li>
+      <li>Gained insights into robotics development challenges and sensor fusion importance</li>
+    </ul>
+  </div>
+</section>
+
+        <!-- <a href="color_space\index.html" target="_blank" class="preview-btn">Preview Project</a> -->
+<a href="RXR_LA5.pdf" target="_blank" class="btn btn-secondary">View Report</a>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
