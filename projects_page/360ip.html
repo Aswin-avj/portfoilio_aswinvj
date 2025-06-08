@@ -155,7 +155,6 @@
         <li><strong>Format Conversions:</strong>
           <ul>
             <li>Equirectangular &harr; Cube map transformations (CPU/GPU)</li>
-            <li>Denoising for both formats</li>
           </ul>
         </li>
         <li><strong>Visualization:</strong>
@@ -192,7 +191,7 @@ __global__ void equiCubeKernel(/*...*/) {
   // Convert to spherical → equirectangular
 }
 </code></pre>
-      <strong>Adaptive Denoising</strong>
+      <!-- <strong>Adaptive Denoising</strong>
       <ul>
         <li><strong>Covariance-Driven Filtering:</strong>
           <ul>
@@ -204,11 +203,10 @@ __global__ void equiCubeKernel(/*...*/) {
         </li>
         <li><strong>Cube Map Optimization:</strong>
           <ul>
-            <li>Denoise individual faces → Convert to equirectangular</li>
             <li>Avoids polar distortions in equirectangular denoising</li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
       <strong>Web Visualization</strong>
       <ul>
         <li><strong>Three.js VR Scene:</strong>
@@ -255,10 +253,6 @@ __global__ void equiCubeKernel(/*...*/) {
           <tr>
             <td>Cube Map</td>
             <td><img src="image_EQUI.png" alt="Equirectangular" style="max-width:120px;"></td>
-          </tr>
-          <tr>
-            <td>Denoised</td>
-            <td><img src="equi_denoised.png" alt="Anaglyph" style="max-width:120px;"></td>
           </tr>
         </tbody>
       </table> -->
